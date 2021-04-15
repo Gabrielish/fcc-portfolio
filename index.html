@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriel Bundea</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Gabriel Bundea</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="stars.png" id="stars" alt="" />
+      <img src="moon.png" id="moon" alt="" />
+      <img src="mountains_behind.png" id="mountains_behind" alt="" />
+      <h2 id="text">Portfolio</h2>
+      <a href="#projects" id="btn">Explore</a>
+      <img src="mountains_front.png" id="mountains_front" alt="" />
+    </section>
+    <div class="sec" id="about">
+      <h2>About</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, est
+        quasi, sequi harum vitae quo quod magnam repellendus inventore ut ipsam
+        perspiciatis hic quas nulla? Alias suscipit sequi accusantium. Facilis?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem
+        sunt, ipsa debitis iusto tempora expedita corrupti? Sint animi hic
+        obcaecati accusamus nisi officiis voluptatibus culpa dolorem? Molestias
+        laborum minus quam? Lorem ipsum, dolor sit amet consectetur adipisicing
+        elit. Quam culpa facere iusto, voluptatibus sed beatae! Nostrum ipsam
+        ducimus, tenetur harum voluptatibus vel ratione et vitae numquam quo,
+        fugiat non corporis! <br><br>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, est
+        quasi, sequi harum vitae quo quod magnam repellendus inventore ut ipsam
+        perspiciatis hic quas nulla? Alias suscipit sequi accusantium. Facilis?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem
+        sunt, ipsa debitis iusto tempora expedita corrupti? Sint animi hic
+        obcaecati accusamus nisi officiis voluptatibus culpa dolorem? Molestias
+        laborum minus quam? Lorem ipsum, dolor sit amet consectetur adipisicing
+        elit. Quam culpa facere iusto, voluptatibus sed beatae! Nostrum ipsam
+        ducimus, tenetur harum voluptatibus vel ratione et vitae numquam quo,
+        fugiat non corporis!
+      </p>
+    </div>
+    <div class="sec" id="projects">
+        <h2>Projects</h2>
+
+    </div>
+
+    <div class="sec" id="contact">
+        <h2>Contact</h2>
+
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+  </body>
+</html>
